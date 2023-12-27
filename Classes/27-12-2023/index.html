@@ -9,15 +9,17 @@
 
 <body>
     <center>
-        <div style="display: flex; width: 130px; align-items: center; margin-bottom: 10px;">
+        <div style="display: flex; width: 130px; align-items: center;">
             <h1>Forms</h1>
             <img src="https://razvanusc.github.io/profile/images/html.gif" width="50px" height="50px">
         </div>
 
+        <p>Learning <b>Forms</b> Chapter</p>
+
         <form style="display: flex; flex-direction: column; width: 50%;">
             <input type="text" placeholder="username">
             <br>
-            <input type="email" placeholder="email">
+            <input type="email" required placeholder="email">
             <br>
             <input type="password" placeholder="password">
             <br>
@@ -30,6 +32,38 @@
             <input type="time" placeholder="time">
             <br>
             <input type="range" placeholder="range">
+            <br>
+            <textarea name="" id="" cols="30" rows="5"></textarea>
+
+            <p>
+                select your age:
+                <input type="radio" name="age">under 18
+                <input type="radio" name="age">under 30
+                <input type="radio" name="age">under 50
+            </p>
+
+            <p>
+                select your hobby:
+                <input type="checkbox" name="hobby" />sports
+                <input type="checkbox" name="hobby" />swiming
+                <input type="checkbox" name="hobby" />reading
+            </p>
+
+            <select>select city
+                <option value="" disabled>Please Select</option>
+                <option value="">Karachi</option>
+                <option value="">Lahore</option>
+                <option value="">Islamabad</option>
+            </select>
+            <br>
+            <br>
+
+            <input type="image" src="https://www.freeiconspng.com/thumbs/submit-button-png/submit-button-png-4.jpg" width="70px">
+
+            <button type="submit">Submit Button</button>
+
+            <br>
+            <br>
             <br>
         </form>
     </center>
