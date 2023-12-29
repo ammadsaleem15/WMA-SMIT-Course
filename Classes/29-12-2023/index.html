@@ -13,13 +13,14 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            font-family: sans-serif;
         }
 
         #main {
             text-align: center;
         }
 
-        #Upload {
+        #upload {
             cursor: pointer;
             display: flex;
             flex-direction: column;
@@ -27,8 +28,18 @@
         }
 
         #image {
-            margin-top: 10px;
+            margin-top: 0px;
             /* Adjust the margin as needed */
+        }
+
+        #button {
+            margin-top: 20px;
+            width: 100px;
+            height: 30px;
+            border: none;
+            color: white;
+            background-color: black;
+            border-radius: 20px;
         }
     </style>
 </head>
@@ -36,10 +47,11 @@
 <body>
     <div id="main">
         <h1>Upload File</h1>
-        <label id="Upload">
-            <img src="https://rb.gy/ou422x" height="100" id="image">
+        <label id="upload">
+            <img src="./img/upload.jpg" height="100" id="image">
             <input type="file" hidden>
         </label>
+        <button id="button" type="submit">Submit</button>
     </div>
 </body>
 
