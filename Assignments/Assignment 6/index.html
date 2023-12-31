@@ -4,76 +4,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Application Form</title>
+  <title>Application Form - 1</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 
 <body>
   <header>
-    <h1>Application Form</h1>
+    <h1>Application Form - 1</h1>
   </header>
 
   <main>
-    <form action="">
-      <label for="First Name">
+    <form action="#">
+      <label for="firstName">
         First Name:
-        <input type="text" id="First Name" />
+        <input type="text" id="firstName" placeholder="Enter your first name" required />
       </label>
-      <label for="Last Name">
+      <label for="lastName">
         Last Name:
-        <input type="text" id="Last Name" />
+        <input type="text" id="lastName" placeholder="Enter your last name" required />
       </label>
-      <br />
-      <br />
-      <label for="Date of Birth">
+
+      <label for="dob">
         Date of Birth:
-        <input type="date" id="Date of Birth" />
+        <input type="date" id="dob" required />
       </label>
-      <label for="Age">
+      <label for="age">
         Age:
-        <input type="number" id="age" min="0" />
+        <input type="number" id="age" min="0" required />
       </label>
-      <br />
-      <br />
-      <label for="Gender">
+
+      <label for="gender">
         Gender:
-        <select id="Gender">
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
+        <select id="gender" required>
+          <option value="" disabled selected>Select your gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
         </select>
       </label>
-      <label for="E-mail">
+
+      <label for="email">
         E-mail Address:
-        <input type="text" id="E-mail" placeholder="Enter e-mail address" />
+        <input type="email" id="email" placeholder="Enter your e-mail address" required />
       </label>
-      <br />
-      <br />
-      <label for="Position">
-        Position Available:
-        <input type="radio" name="Position" id="Position" /> Junior Developer
-        <input type="radio" name="Position" id="Position" /> Mid-Level
-        Developer <input type="radio" name="Position" id="Position" /> Junior
-        Developer
-      </label>
-      <br />
-      <br />
-      <label for="Languages">
-        Position Available:
-        <input type="checkbox" name="Languages" id="Languages" /> Java
-        <input type="checkbox" name="Languages" id="Languages" /> JavaScript
-        <input type="checkbox" name="Languages" id="Languages" /> Python
-      </label>
-      <br />
-      <br />
-      <label for="Password">
+
+      <fieldset>
+        <legend>Position Available:</legend>
+        <label>
+          <input type="radio" name="position" value="junior" required />
+          Junior Developer
+        </label>
+        <label>
+          <input type="radio" name="position" value="midLevel" required />
+          Mid-Level Developer
+        </label>
+        <label>
+          <input type="radio" name="position" value="senior" required />
+          Senior Developer
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Languages:</legend>
+        <label>
+          <input type="checkbox" name="languages" value="java" />
+          Java
+        </label>
+        <label>
+          <input type="checkbox" name="languages" value="javascript" />
+          JavaScript
+        </label>
+        <label>
+          <input type="checkbox" name="languages" value="python" />
+          Python
+        </label>
+      </fieldset>
+
+      <label for="password">
         Password:
-        <input type="password" id="Password" />
+        <input type="password" id="password" required />
       </label>
-      <label for="Confirm Password">
+
+      <label for="confirmPassword">
         Confirm Password:
-        <input type="password" id="Confirm Password" />
+        <input type="password" id="confirmPassword" required />
       </label>
-      <br>
-      <br>
+
       <button type="submit">Submit</button>
       <button type="reset">Reset</button>
     </form>
